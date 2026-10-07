@@ -35,4 +35,4 @@ def get_lfa() -> LfaInfo:
             return lfa
         raise RuntimeError(f"Cannot provide EFD name for {label}.")
     except KeyError:
-        raise RuntimeError("LSST_SITE not defined")
+        return LfaInfo("https://s3dfrgw.slac.stanford.edu", "rubinobs-lfa-cp", "lfa")

@@ -36,5 +36,7 @@ class TestSiteLfa(unittest.TestCase):
             get_lfa()
 
         del os.environ[ENV_VAR]
-        with self.assertRaises(RuntimeError):
-            get_lfa()
+        lfa = get_lfa()
+        self.assertEqual(lfa.bucket, "rubinobs-lfa-cp")
+        self.assertEqual(lfa.endpoint_url, "https://s3dfrgw.slac.stanford.edu")
+        self.assertEqual(lfa.profile, "lfa")
