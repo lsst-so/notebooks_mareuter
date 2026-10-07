@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 logger.level = logging.DEBUG
 
 
-class TestPlaylistUtils(unittest.TestCase):
+class TestAwsDuHelpers(unittest.TestCase):
     def setUp(self) -> None:
         self.du_info = [
             adh.AwsDuInfo("test1", 300000, 1000),
